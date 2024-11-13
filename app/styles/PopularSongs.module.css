@@ -1,0 +1,35 @@
+.popular-songs {
+  margin-top: 10px;
+}
+.list {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  gap: 15px;
+  margin-top: 0.625rem;
+}
+.list li {
+  min-width: 15%;
+  height: 10rem;
+  overflow: hidden;
+  padding: 0.625rem;
+  border-radius: 0.625rem;
+  font-size: 0.625rem;
+  color: #9b9fa0;
+  text-align: center;
+}
+.list li img {
+  border-radius: 0.625rem;
+  width: 100% !important;
+  height: 80% !important;
+}
+.list li h4 {
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .list li {
+    min-width: 25%;
+  }
+}

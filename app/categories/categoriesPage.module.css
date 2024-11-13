@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-top: 3.125rem;
+}
+.genre {
+  width: 12.5rem;
+  height: 12.5rem;
+}

@@ -1,0 +1,52 @@
+.sidebar {
+  background-color: #181b22;
+  width: 100%;
+  height: 80vh;
+  border-radius: 1.25rem;
+  padding: 0.625rem;
+  color: #807f84;
+  position: relative;
+  transition: 0.3s all linear;
+  overflow: hidden;
+}
+.logout {
+  position: absolute;
+  bottom: 0.625rem;
+  background: inherit;
+  border: none;
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: #807f84;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-left: 0.75rem;
+}
+.logout-icon {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 1023px) {
+  .logout-title {
+    display: none;
+  }
+
+  .logout {
+    justify-content: center;
+    padding: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar {
+    height: auto;
+    width: auto;
+    padding: 0;
+    background-color: inherit;
+    display: flex;
+  }
+  .logout {
+    display: none;
+  }
+}

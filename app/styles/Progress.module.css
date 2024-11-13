@@ -1,0 +1,38 @@
+.container span {
+  font-size: 0.875rem;
+}
+.progress {
+  height: 30px;
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  cursor: pointer;
+  width: 45%;
+  justify-content: center;
+  margin-left: 3.125rem;
+}
+.item {
+  width: 2px;
+}
+
+@media (max-width: 1023px) {
+  .progress {
+    margin-left: 0.9375rem;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 768px) {
+  .progress {
+    width: 100%;
+    justify-content: center;
+    order: 4;
+    margin: auto;
+    height: 2px !important;
+    padding: 0 0.3125rem;
+    gap: 0;
+  }
+  .item {
+    height: 4px !important;
+    width: 4px;
+  }
+}

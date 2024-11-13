@@ -1,0 +1,141 @@
+:root {
+  --background: #0b0e15;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b0e15;
+  }
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.layout {
+  height: 100vh;
+  width: 100%;
+  padding: 0.9375rem;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header {
+  width: 100%;
+  height: 2.1875rem;
+}
+.content {
+  width: 80%;
+  height: 80vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 4rem;
+  background-color: #1e212a;
+}
+
+.loading-container {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0b0e1528;
+}
+.sidebar {
+  width: 15%;
+}
+.loader {
+  width: 45px;
+  aspect-ratio: 1;
+  --c: no-repeat linear-gradient(#ffffff 0 0);
+  background: var(--c) 0% 100%, var(--c) 50% 100%, var(--c) 100% 100%;
+  animation: l2 1s infinite linear;
+}
+.copyright {
+  font-size: 0.5rem;
+  color: #474747;
+}
+@keyframes l2 {
+  0% {
+    background-size: 20% 100%, 20% 100%, 20% 100%;
+  }
+  20% {
+    background-size: 20% 60%, 20% 100%, 20% 100%;
+  }
+  40% {
+    background-size: 20% 80%, 20% 60%, 20% 100%;
+  }
+  60% {
+    background-size: 20% 100%, 20% 80%, 20% 60%;
+  }
+  80% {
+    background-size: 20% 100%, 20% 100%, 20% 80%;
+  }
+  100% {
+    background-size: 20% 100%, 20% 100%, 20% 100%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .content {
+    width: 88%;
+  }
+  .sidebar {
+    width: 10%;
+  }
+  .player {
+    height: 15vh;
+    padding: 0 0.3125rem;
+    padding-top: 0.6125rem;
+  }
+}
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    height: auto;
+    z-index: 33;
+    background-color: #0b0e15;
+    width: auto;
+  }
+  .content {
+    width: 100%;
+  }
+}
