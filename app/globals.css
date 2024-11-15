@@ -126,6 +126,9 @@ button {
     padding: 0 0.3125rem;
     padding-top: 0.6125rem;
   }
+  .copyright {
+display:none;
+}
 }
 @media (max-width: 768px) {
   .sidebar {
